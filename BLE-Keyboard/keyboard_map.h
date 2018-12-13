@@ -49,6 +49,6 @@ static const uint8_t default_matrix_lookup[KEYBOARD_NUM_OF_COLUMNS * KEYBOARD_NU
     0x00,      0x00,      KC_LALT,   0x00,      KC_Y,         KC_D,      0x00,             KC_T,      KC_3,      KC_U,      KC_I,      0x00,      KC_LBRC,   0x00,      0x00,      KC_RIGHT,
     0x00,      KC_RCTRL,  0x00,      0x00,      KC_CAPSLOCK,  KC_TAB,    0x00,             KC_1,      KC_2,      KC_5,      KC_7,      KC_9,      KC_MINUS,  KC_QUOTE,  0x00,      KC_END,
     0x00,      0x00,      0x00,      0x00,      0x00,         KC_Q,      0x00,             KC_GRAVE,  KC_F4,     KC_4,      KC_6,      KC_8,      KC_0,      KC_RBRC,   KC_HOME,   KC_PGUP,
-    0x00,      0x00,      0x00,      0x00,      KC_S,         KC_W,      0x00,             KC_F1,     KC_F3,     KC_F6,     KC_F8,     KC_F10,    KC_F12,    KC_EQUAL,  KC_DELETE, KC_INSERT,
-    0x00,      0x00,      0x00,      0x00,      KC_NONUS_HASH,0x00,      0x00,             KC_ESCAPE, KC_F2,     KC_F5,     KC_F7,     KC_F9,     KC_F11,    0,/*FNL*/  KC_PSCREEN,KC_BSPACE
+    KC_RSHIFT, 0x00,      0x00,      0x00,      KC_S,         KC_W,      0x00,             KC_F1,     KC_F3,     KC_F6,     KC_F8,     KC_F10,    KC_F12,    KC_EQUAL,  KC_DELETE, KC_INSERT,
+    KC_LSHIFT, 0x00,      0x00,      0x00,      KC_NONUS_HASH,0x00,      0x00,             KC_ESCAPE, KC_F2,     KC_F5,     KC_F7,     KC_F9,     KC_F11,    0,/*FNL*/  KC_PSCREEN,KC_BSPACE
 };

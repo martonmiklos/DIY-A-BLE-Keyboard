@@ -138,10 +138,9 @@ static bool keymatrix_read(uint8_t *pressed_keys, uint8_t *number_of_pressed_key
         nrf_gpio_pin_clear((uint32_t) column_pin_array[column]);
     }
 
-    for (uint_fast8_t column =  KEYBOARD_NUM_OF_COLUMNS; column--;){	//Loop through each column
-        nrf_gpio_pin_set((uint32_t) column_pin_array[column]);
-        if (((NRF_GPIO->IN)&input_scan_vector) != 0){					//If any input is high
-
+    for (uint_fast8_t column =  KEYBOARD_NUM_OF_COLUMNS; column--;){	// Loop through each column
+        nrf_gpio_pin_set((uint32_t) column_pin_array[column]);          // set col to high
+        if (((NRF_GPIO->IN)&input_scan_vector) != 0) {					// If any input is high
             row_state[column] = 0;
             uint_fast8_t detected_keypresses_on_column = 0;
             for (uint_fast8_t row = KEYBOARD_NUM_OF_ROWS; row--;){		//Loop through each row
@@ -150,10 +149,10 @@ static bool keymatrix_read(uint8_t *pressed_keys, uint8_t *number_of_pressed_key
                 if (pin_state){											//If pin is high
                     if (*number_of_pressed_keys < MAX_NUM_OF_PRESSED_KEYS){
                         *pressed_keys = matrix_lookup[row * KEYBOARD_NUM_OF_COLUMNS + column];
-                        //if(*pressed_keys != 0){							//Record the pressed key if it's not 0
+                        if (*pressed_keys != 0) {					    //Record the pressed key if it's not 0
                             pressed_keys++;
                             (*number_of_pressed_keys)++;
-                        //}
+                        }
                     }
                     detected_keypresses_on_column++;
                 }
